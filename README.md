@@ -1,4 +1,4 @@
-<h2>Encriptador Encriptador de texto - Alura Challenges ONE</h2>
+<h2>Encriptador de texto - Alura Challenges ONE</h2>
 
 ![](https://play-lh.googleusercontent.com/TM-g_2L7u2p99kwg4IQeB-3352WfCq0vKXP4h5cOvISUlNll6-1WHu8t2B0oZdZKjkmp=w512)
 <div style="display: inline_block"><br>
