@@ -1,3 +1,21 @@
+function filtrarEntrada(event) {
+    var textarea = event.target;
+    var texto = textarea.value;
+
+    // Eliminar mayúsculas y caracteres especiales
+    var textoFiltrado = texto.replace(/[A-ZÁÉÍÓÚÜÑñ!@#$%^&*()]/g, '').toLowerCase();
+    // Actualizar el valor del textarea con el texto filtrado
+    textarea.value = textoFiltrado;
+    if (textoFiltrado !== texto){
+        alert('No se permiten mayúsculas ni caracteres especiales')
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", function(event) {
+    var textarea = document.getElementById("txta-entrada");
+    textarea.addEventListener("input", filtrarEntrada);
+  });
+
 function mostrarEtiquetas(mostrar, ocultar){    
             document.getElementById('txta-salida').style.display = mostrar
             document.getElementById('btn-copiar').style.display = mostrar
