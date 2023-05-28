@@ -1,20 +1,14 @@
-function filtrarEntrada(event) {
-    var textarea = event.target;
-    var texto = textarea.value;
+var textarea = this.document.getElementById('txta-entrada')
 
-    // Eliminar mayúsculas y caracteres especiales
-    var textoFiltrado = texto.replace(/[A-ZÁÉÍÓÚÜÑñ!@#$%^&*()]/g, '').toLowerCase();
-    // Actualizar el valor del textarea con el texto filtrado
-    textarea.value = textoFiltrado;
-    if (textoFiltrado !== texto){
-        alert('No se permiten mayúsculas ni caracteres especiales')
+textarea.addEventListener('keydown', function(event) {
+    const allowedKeys = ['Backspace', 'Enter', 'Delete'];
+    const allowedCharacters = /^[a-z0-9\s]$/
+  
+    if (!allowedKeys.includes(event.key) && !event.key.match(allowedCharacters)) {
+      event.preventDefault()
+      alert('No se permiten mayúsculas ni caracteres especiales')
     }
-  }
-
-  window.addEventListener("DOMContentLoaded", function(event) {
-    var textarea = document.getElementById("txta-entrada");
-    textarea.addEventListener("input", filtrarEntrada);
-  });
+});
 
 function mostrarEtiquetas(mostrar, ocultar){    
             document.getElementById('txta-salida').style.display = mostrar
